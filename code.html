@@ -1,0 +1,619 @@
+<!DOCTYPE html><html class="dark" lang="ko"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Atlas Archive: Wraeclast Chronicles</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@500&amp;family=Source+Serif+4:opsz,wght@8..60,700;8..60,800;8..60,900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#05297a",
+                      "surface-bright": "#37393d",
+                      "secondary": "#e9c349",
+                      "primary-container": "#8b0000",
+                      "parchment-white": "#E0D7C6",
+                      "void-black": "#050607",
+                      "surface": "#111417",
+                      "inverse-primary": "#b52619",
+                      "on-tertiary-fixed-variant": "#264191",
+                      "inverse-on-surface": "#2e3134",
+                      "outline-variant": "#5a403c",
+                      "primary-fixed": "#ffdad4",
+                      "surface-container-highest": "#323538",
+                      "blood-crimson": "#8B0000",
+                      "on-tertiary-container": "#94abff",
+                      "deep-obsidian": "#0B0E11",
+                      "background": "#111417",
+                      "on-primary": "#690000",
+                      "on-secondary-container": "#342800",
+                      "stone-gray": "#333333",
+                      "tertiary-fixed": "#dce1ff",
+                      "on-secondary-fixed": "#241a00",
+                      "surface-container-lowest": "#0b0e11",
+                      "surface-tint": "#ffb4a8",
+                      "on-surface": "#e1e2e7",
+                      "on-error": "#690005",
+                      "on-secondary-fixed-variant": "#574500",
+                      "primary-fixed-dim": "#ffb4a8",
+                      "tertiary-fixed-dim": "#b6c4ff",
+                      "ethereal-blue": "#1E3A8A",
+                      "on-primary-fixed": "#410000",
+                      "inverse-surface": "#e1e2e7",
+                      "error-container": "#93000a",
+                      "on-tertiary-fixed": "#00164e",
+                      "surface-container": "#1d2023",
+                      "secondary-fixed-dim": "#e9c349",
+                      "surface-container-high": "#272a2e",
+                      "tertiary": "#b6c4ff",
+                      "secondary-container": "#af8d11",
+                      "tertiary-container": "#203c8c",
+                      "on-primary-fixed-variant": "#920703",
+                      "on-secondary": "#3c2f00",
+                      "on-surface-variant": "#e3beb8",
+                      "on-error-container": "#ffdad6",
+                      "surface-variant": "#323538",
+                      "on-primary-container": "#ff907f",
+                      "surface-dim": "#111417",
+                      "outline": "#aa8984",
+                      "golden-currency": "#D4AF37",
+                      "surface-container-low": "#191c1f",
+                      "secondary-fixed": "#ffe088",
+                      "error": "#ffb4ab",
+                      "primary": "#ffb4a8",
+                      "on-background": "#e1e2e7"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "unit": "4px",
+                      "gutter": "24px",
+                      "margin-edge": "32px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "\"Source Serif 4\""
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "\"Source Serif 4\""
+                      ],
+                      "label-md": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-xl": [
+                              "\"Source Serif 4\""
+                      ],
+                      "headline-lg": [
+                              "\"Source Serif 4\""
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "JetBrains Mono"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "900"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "14px",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .noise-bg {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+        
+        .iron-border {
+            position: relative;
+        }
+        
+        .iron-border::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(to bottom right, #5a403c, #1a1d21);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .ethereal-glow:hover {
+            box-shadow: 0 0 15px rgba(30, 58, 138, 0.5);
+        }
+
+        .golden-glow:hover {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+        
+        .card-stone-slab {
+            background-color: #1A1D21;
+            border: 1px solid #333;
+        }
+        
+        .card-header-accent {
+            border-bottom: 1px solid #D4AF37;
+        }
+    </style>
+</head>
+<body class="bg-deep-obsidian text-on-surface noise-bg min-h-screen flex flex-col font-body-md relative overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-deep-obsidian border-b border-outline-variant docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-edge h-16 max-w-container-max mx-auto">
+<div class="flex items-center gap-6">
+<a class="font-headline-md text-headline-md font-black text-golden-currency uppercase tracking-tighter" href="#">WRAECLAST CHRONICLES</a>
+<nav class="hidden md:flex gap-6 h-full items-center">
+<a class="text-golden-currency border-b-2 border-golden-currency pb-1 font-label-md text-label-md h-full flex items-center mt-[2px]" href="#">Atlas</a>
+<a class="text-parchment-white hover:text-golden-currency transition-colors font-label-md text-label-md h-full flex items-center" href="#">Mechanics</a>
+<a class="text-parchment-white hover:text-golden-currency transition-colors font-label-md text-label-md h-full flex items-center" href="#">Crafting</a>
+<a class="text-parchment-white hover:text-golden-currency transition-colors font-label-md text-label-md h-full flex items-center" href="#">Guides</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex bg-void-black border border-stone-gray rounded-sm px-3 py-1.5 items-center inner-shadow">
+<span class="material-symbols-outlined text-outline text-sm mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none text-parchment-white text-body-sm focus:ring-0 p-0 placeholder-outline-variant w-48" placeholder="Search archives..." type="text">
+</div>
+<button class="text-parchment-white hover:bg-surface-container-highest/20 hover:text-golden-currency p-2 rounded transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<button class="text-parchment-white hover:bg-surface-container-highest/20 hover:text-golden-currency p-2 rounded transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+<button class="bg-blood-crimson text-white font-label-md text-label-md px-4 py-1.5 rounded-sm hover:ring-2 hover:ring-inset hover:ring-golden-currency transition-all shadow-[inset_0_0_10px_rgba(0,0,0,0.5)] active:scale-95 duration-150 ml-2">Sign In</button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center w-full max-w-container-max mx-auto px-margin-edge py-gutter pb-24">
+<!-- Hero Section -->
+<section class="w-full mb-12 relative rounded-lg overflow-hidden iron-border group">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-40 group-hover:opacity-60 transition-opacity duration-700" data-alt="A dark fantasy landscape in Path of Exile, an ancient stone atlas map glowing with ethereal blue and blood red magic, dramatic lighting, gritty realism, high contrast dark mode aesthetic with golden accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBa2vrzjpJBSHe-0nv3V5mgcQ__DwOpBWuD6EOutCmHEu_MjBiPMMU8QTG0wdLk4IMNA5oqYetMVTmRYaykI4H1JHjg-AEWrmKc2rq2QR3m3QQU8-1L-kbrjepFyfBphi4-OjNQuaCV8d75mhOUPMoJUGZAUSSu_Qel7mQ7PWh76t71M54-cmLxoW4NM0SSi54Ifu9YEb81r2oZw-SFa2GMY7gaY_a3CrgT8Ng5ML0G_kPiZ9YbxX8')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-obsidian via-deep-obsidian/80 to-transparent"></div>
+</div>
+<div class="relative z-10 p-8 md:p-16 flex flex-col items-center text-center">
+<span class="font-label-md text-label-md text-ethereal-blue bg-ethereal-blue/10 border border-ethereal-blue/30 px-3 py-1 rounded-sm mb-4">시즌 3.24 업데이트 가이드</span>
+<h1 class="font-headline-xl text-headline-xl text-parchment-white mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">아틀라스의 정복자: 콘텐츠 완벽 가이드</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">레이클라스트의 위험한 환경에서 살아남고 막대한 부를 축적하기 위한 10가지 주요 파밍 메커니즘을 분석합니다. 당신의 빌드에 가장 적합한 전략을 선택하세요.</p>
+<div class="flex gap-4">
+<a href="https://poeplanner.com/" target="_blank" class="bg-blood-crimson text-white font-label-md text-label-md px-6 py-3 rounded-sm hover:ring-2 hover:ring-inset hover:ring-golden-currency transition-all shadow-[inset_0_0_15px_rgba(0,0,0,0.6)] text-center inline-block">
+                        아틀라스 트리 짜기
+                    </a>
+<button class="bg-transparent border border-outline-variant text-parchment-white font-label-md text-label-md px-6 py-3 rounded-sm hover:border-parchment-white hover:bg-surface-container/50 transition-all">
+                        인기 파밍법 보기
+                    </button>
+</div>
+</div>
+</section>
+<!-- Mechanics Grid (Bento Style) -->
+<div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-unit-2 md:gap-gutter">
+<!-- 1. 성역 (Sanctum) -->
+<div class="card-stone-slab rounded-sm overflow-hidden golden-glow transition-all duration-300 group hover:-translate-y-1 relative lg:col-span-2">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-golden-currency to-transparent group-hover:opacity-20 transition-opacity"></div>
+<div class="p-5 flex flex-col h-full relative z-10">
+<div class="flex justify-between items-start mb-4 card-header-accent pb-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-golden-currency text-3xl" data-icon="account_balance">account_balance</span>
+<div>
+<h3 class="font-headline-lg text-headline-lg text-parchment-white">성역</h3>
+<p class="font-label-sm text-label-sm text-outline">The Forbidden Sanctum</p>
+</div>
+</div>
+<div class="flex gap-1 text-golden-currency">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm text-stone-gray" data-icon="star">star</span>
+<span class="material-symbols-outlined text-sm text-stone-gray" data-icon="star">star</span>
+<span class="material-symbols-outlined text-sm text-stone-gray" data-icon="star">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                        자신의 결의를 시험하는 로그라이크 던전. 방어 기재보다 압도적인 화력과 회피 기동이 중요합니다. 숙련된다면 가장 안정적인 수입원이 될 수 있습니다.
+                    </p>
+<div class="bg-void-black p-3 rounded-sm border border-stone-gray">
+<h4 class="font-label-md text-label-md text-golden-currency mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="diamond">diamond</span> 주요 보상
+                        </h4>
+<ul class="font-body-sm text-body-sm text-parchment-white space-y-1">
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-golden-currency before:rotate-45">대량의 순수 화폐 (신성한 오브 등)</li>
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-ethereal-blue before:rotate-45">고유 유물 및 전용 고유 아이템</li>
+</ul>
+</div><div class="mt-4 bg-blood-crimson/10 p-3 rounded-sm border border-blood-crimson/30"><h4 class="font-label-md text-label-md text-blood-crimson mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-sm">workspace_premium</span> 가장 가치 있는 아이템</h4><p class="font-body-sm text-body-sm text-parchment-white"><span class="text-golden-currency font-bold">원죄 &amp; 원형의 성서:</span> 고유 파피루스 유물(원형의 성서)을 배치하여 최종 보스를 처치하고 획득하는 고유 반지(원죄)로, 모든 원소 피해를 카오스 피해로 전환합니다.</p></div>
+<div class="mt-4 flex items-center justify-between">
+<span class="font-label-sm text-label-sm bg-blood-crimson/20 text-blood-crimson border border-blood-crimson/30 px-2 py-0.5 rounded-sm">진입 장벽: 높음</span>
+</div>
+</div>
+</div>
+<!-- 2. 탐험 (Expedition) -->
+<div class="card-stone-slab rounded-sm overflow-hidden ethereal-glow transition-all duration-300 group hover:-translate-y-1 relative">
+<div class="p-5 flex flex-col h-full relative z-10">
+<div class="flex justify-between items-start mb-4 card-header-accent pb-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-ethereal-blue text-3xl" data-icon="explore">explore</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-parchment-white">탐험</h3>
+<p class="font-label-sm text-label-sm text-outline">Expedition</p>
+</div>
+</div>
+<div class="flex gap-1 text-golden-currency">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm text-stone-gray" data-icon="star">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-grow">
+                        폭발물을 설치하여 묻혀있는 보상과 몬스터를 파냅니다. 면역 옵션을 피하는 신중한 설계가 필요합니다.
+                    </p>
+<div class="bg-void-black p-3 rounded-sm border border-stone-gray">
+<ul class="font-body-sm text-body-sm text-parchment-white space-y-1">
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-golden-currency before:rotate-45">투젠/대닉 화폐 교환</li>
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-golden-currency before:rotate-45">로그 강력한 희귀 아이템 제작</li>
+</ul>
+</div><div class="mt-4 bg-blood-crimson/10 p-3 rounded-sm border border-blood-crimson/30"><h4 class="font-label-md text-label-md text-blood-crimson mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-sm">workspace_premium</span> 가장 가치 있는 아이템</h4><p class="font-body-sm text-body-sm text-parchment-white"><span class="text-golden-currency font-bold">올로스의 결의 &amp; 탐험 일지:</span> 보스 올로스가 드롭하는 고유 플라스크로, 수호 루프(Wardloop) 빌드의 핵심 생존 파츠입니다.</p></div>
+<div class="mt-4">
+<span class="font-label-sm text-label-sm bg-ethereal-blue/20 text-tertiary-fixed-dim border border-ethereal-blue/30 px-2 py-0.5 rounded-sm">강력 추천</span>
+</div>
+</div>
+</div>
+<!-- 3. 심연 (Abyss) -->
+<div class="card-stone-slab rounded-sm overflow-hidden ethereal-glow transition-all duration-300 group hover:-translate-y-1 relative">
+<div class="p-5 flex flex-col h-full relative z-10">
+<div class="flex justify-between items-start mb-4 card-header-accent pb-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blood-crimson text-3xl" data-icon="cracked_earth">checked_bag</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-parchment-white">심연</h3>
+<p class="font-label-sm text-label-sm text-outline">Abyss</p>
+</div>
+</div>
+<div class="flex gap-1 text-golden-currency">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm text-stone-gray" data-icon="star">star</span>
+<span class="material-symbols-outlined text-sm text-stone-gray" data-icon="star">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-grow">
+                        땅의 균열을 따라가며 쏟아져 나오는 몬스터를 처치합니다. 몬스터 팩 팩 증가 효과가 뛰어나 경험치 파밍에 유리합니다.
+                    </p>
+<div class="bg-void-black p-3 rounded-sm border border-stone-gray">
+<ul class="font-body-sm text-body-sm text-parchment-white space-y-1">
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-blood-crimson before:rotate-45">명계의 조임쇠 (허리띠)</li>
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-blood-crimson before:rotate-45">심연 주얼 (눈)</li>
+</ul>
+</div><div class="mt-4 bg-blood-crimson/10 p-3 rounded-sm border border-blood-crimson/30"><h4 class="font-label-md text-label-md text-blood-crimson mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-sm">workspace_premium</span> 가장 가치 있는 아이템</h4><p class="font-body-sm text-body-sm text-parchment-white"><span class="text-golden-currency font-bold">아마나무의 응시:</span> 소환수의 지속 피해 배율을 최대 30%까지 증가시켜 주는 고유 무시무시한 눈 주얼입니다.</p></div>
+</div>
+</div>
+<!-- 4. 에센스 (Essence) -->
+<div class="card-stone-slab rounded-sm overflow-hidden golden-glow transition-all duration-300 group hover:-translate-y-1 relative">
+<div class="p-5 flex flex-col h-full relative z-10">
+<div class="flex justify-between items-start mb-4 card-header-accent pb-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#AF641D] text-3xl" data-icon="ac_unit">ac_unit</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-parchment-white">에센스</h3>
+<p class="font-label-sm text-label-sm text-outline">Essence</p>
+</div>
+</div>
+<div class="flex gap-1 text-golden-currency">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-grow">
+                        얼어붙은 몬스터를 해방시키고 강력한 확정 옵션 제작 재료를 획득합니다. 초반 아이템 제작의 핵심.
+                    </p>
+<div class="bg-void-black p-3 rounded-sm border border-stone-gray">
+<ul class="font-body-sm text-body-sm text-parchment-white space-y-1">
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-[#AF641D] before:rotate-45">확정 옵션 부여 화폐</li>
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-[#AF641D] before:rotate-45">타락의 유물로 특수 에센스 획득</li>
+</ul>
+</div><div class="mt-4 bg-blood-crimson/10 p-3 rounded-sm border border-blood-crimson/30"><h4 class="font-label-md text-label-md text-blood-crimson mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-sm">workspace_premium</span> 가장 가치 있는 아이템</h4><p class="font-body-sm text-body-sm text-parchment-white"><span class="text-golden-currency font-bold">특수 에센스:</span> 타락의 유물로만 획득 가능한 광기/발작/경악/섬망의 에센스입니다.</p></div>
+<div class="mt-4">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-parchment-white border border-outline px-2 py-0.5 rounded-sm">스타터 필수</span>
+</div>
+</div>
+</div>
+<!-- 5. 금고 (Strongbox) -->
+<div class="card-stone-slab rounded-sm overflow-hidden golden-glow transition-all duration-300 group hover:-translate-y-1 relative">
+<div class="p-5 flex flex-col h-full relative z-10">
+<div class="flex justify-between items-start mb-4 card-header-accent pb-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-golden-currency text-3xl" data-icon="treasure_chest">area_chart</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-parchment-white">금고</h3>
+<p class="font-label-sm text-label-sm text-outline">Strongbox</p>
+</div>
+</div>
+<div class="flex gap-1 text-golden-currency">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-grow">
+                        맵 곳곳에 생성되는 상자. 여는 순간 함정과 몬스터가 등장합니다. 직관적이고 빠른 파밍이 장점입니다.
+                    </p>
+<div class="bg-void-black p-3 rounded-sm border border-stone-gray">
+<ul class="font-body-sm text-body-sm text-parchment-white space-y-1">
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-golden-currency before:rotate-45">지도, 점술 카드, 일반 화폐</li>
+</ul>
+</div><div class="mt-4 bg-blood-crimson/10 p-3 rounded-sm border border-blood-crimson/30"><h4 class="font-label-md text-label-md text-blood-crimson mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-sm">workspace_premium</span> 가장 가치 있는 아이템</h4><p class="font-body-sm text-body-sm text-parchment-white"><span class="text-golden-currency font-bold">신성한 오브 &amp; 고가치 점술 카드:</span> 거래 및 제작의 핵심 화폐와 마법사의 피(Mageblood)를 얻을 수 있는 점술 카드입니다.</p></div>
+</div>
+</div>
+<!-- 6. 역병 (Blight) -->
+<div class="card-stone-slab rounded-sm overflow-hidden ethereal-glow transition-all duration-300 group hover:-translate-y-1 relative lg:col-span-2">
+<div class="p-5 flex flex-col h-full relative z-10">
+<div class="flex justify-between items-start mb-4 card-header-accent pb-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#AF641D] text-3xl" data-icon="spoke">spoke</span>
+<div>
+<h3 class="font-headline-lg text-headline-lg text-parchment-white">역병</h3>
+<p class="font-label-sm text-label-sm text-outline">Blight</p>
+</div>
+</div>
+<div class="flex gap-1 text-golden-currency">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm text-stone-gray" data-icon="star">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                        펌프를 방어하기 위해 탑을 건설하는 타워 디펜스 미니게임. 본체의 스펙보다 탑 건설 전략과 성유물 인챈트 지식이 더 중요하게 작용합니다.
+                    </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-void-black p-3 rounded-sm border border-stone-gray">
+<h4 class="font-label-md text-label-md text-golden-currency mb-2">주요 보상</h4>
+<ul class="font-body-sm text-body-sm text-parchment-white space-y-1">
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-[#AF641D] before:rotate-45">성유 (반지/목걸이 인챈트)</li>
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-[#AF641D] before:rotate-45">역병 걸린 지도</li>
+</ul>
+</div><div class="mt-4 bg-blood-crimson/10 p-3 rounded-sm border border-blood-crimson/30"><h4 class="font-label-md text-label-md text-blood-crimson mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-sm">workspace_premium</span> 가장 가치 있는 아이템</h4><p class="font-body-sm text-body-sm text-parchment-white"><span class="text-golden-currency font-bold">교살의 손아귀 &amp; 더럽혀진 성유:</span> 역병 유린 지도에서만 드롭되는 고유 목걸이(성유 4개 인챈트 가능)와 타락 인챈트용 최고가 성유입니다.</p></div>
+<div class="flex items-end justify-end pb-3 pr-3">
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant border border-outline px-2 py-0.5 rounded-sm">전략 기반 플레이</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 7. 환영 (Delirium) -->
+<div class="card-stone-slab rounded-sm overflow-hidden ethereal-glow transition-all duration-300 group hover:-translate-y-1 relative">
+<div class="p-5 flex flex-col h-full relative z-10">
+<div class="flex justify-between items-start mb-4 card-header-accent pb-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-tertiary-container text-3xl" data-icon="foggy">foggy</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-parchment-white">환영</h3>
+<p class="font-label-sm text-label-sm text-outline">Delirium</p>
+</div>
+</div>
+<div class="flex gap-1 text-golden-currency">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm text-stone-gray" data-icon="star">star</span>
+<span class="material-symbols-outlined text-sm text-stone-gray" data-icon="star">star</span>
+<span class="material-symbols-outlined text-sm text-stone-gray" data-icon="star">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-grow">
+                        광기의 안개 속에서 깊이 들어갈수록 몬스터가 흉악해집니다. 엔드게임 빌드를 위한 가혹한 테스트 무대.
+                    </p>
+<div class="bg-void-black p-3 rounded-sm border border-stone-gray">
+<ul class="font-body-sm text-body-sm text-parchment-white space-y-1">
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-on-tertiary-container before:rotate-45">스킬 군 주얼</li>
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-on-tertiary-container before:rotate-45">복제된 영토 파편</li>
+</ul>
+</div><div class="mt-4 bg-blood-crimson/10 p-3 rounded-sm border border-blood-crimson/30"><h4 class="font-label-md text-label-md text-blood-crimson mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-sm">workspace_premium</span> 가장 가치 있는 아이템</h4><p class="font-body-sm text-body-sm text-parchment-white"><span class="text-golden-currency font-bold">목소리:</span> 패시브 낭비가 적을수록 가치가 급등하며, 특히 1구체와 3구체 버전은 극도로 고가에 거래됩니다.</p></div>
+<div class="mt-4">
+<span class="font-label-sm text-label-sm bg-blood-crimson/20 text-blood-crimson border border-blood-crimson/30 px-2 py-0.5 rounded-sm">높은 스펙 요구</span>
+</div>
+</div>
+</div>
+<!-- 8. 균열 (Breach) -->
+<div class="card-stone-slab rounded-sm overflow-hidden golden-glow transition-all duration-300 group hover:-translate-y-1 relative">
+<div class="p-5 flex flex-col h-full relative z-10">
+<div class="flex justify-between items-start mb-4 card-header-accent pb-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-ethereal-blue text-3xl" data-icon="lens_blur">lens_blur</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-parchment-white">균열</h3>
+<p class="font-label-sm text-label-sm text-outline">Breach</p>
+</div>
+</div>
+<div class="flex gap-1 text-golden-currency">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm text-stone-gray" data-icon="star">star</span>
+<span class="material-symbols-outlined text-sm text-stone-gray" data-icon="star">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-grow">
+                        평행 차원을 열어 쏟아지는 이계의 군단을 처치합니다. 높은 몹 밀집도로 쾌적한 매핑을 제공합니다.
+                    </p>
+<div class="bg-void-black p-3 rounded-sm border border-stone-gray">
+<ul class="font-body-sm text-body-sm text-parchment-white space-y-1">
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-ethereal-blue before:rotate-45">균열석 및 파편</li>
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-ethereal-blue before:rotate-45">균열 고유 아이템 및 축복</li>
+</ul>
+</div><div class="mt-4 bg-blood-crimson/10 p-3 rounded-sm border border-blood-crimson/30"><h4 class="font-label-md text-label-md text-blood-crimson mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-sm">workspace_premium</span> 가장 가치 있는 아이템</h4><p class="font-body-sm text-body-sm text-parchment-white"><span class="text-golden-currency font-bold">울네톨의 맹세:</span> 추가 보조 젬 연결을 가능하게 하는 강력한 고유 목걸이입니다.</p></div>
+</div>
+</div>
+<!-- 9. 기습 (Incursion/Alva) -->
+<div class="card-stone-slab rounded-sm overflow-hidden ethereal-glow transition-all duration-300 group hover:-translate-y-1 relative">
+<div class="p-5 flex flex-col h-full relative z-10">
+<div class="flex justify-between items-start mb-4 card-header-accent pb-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#AF641D] text-3xl" data-icon="temple_buddhist">temple_buddhist</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-parchment-white">기습</h3>
+<p class="font-label-sm text-label-sm text-outline">Incursion</p>
+</div>
+</div>
+<div class="flex gap-1 text-golden-currency">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm text-stone-gray" data-icon="star">star</span>
+<span class="material-symbols-outlined text-sm text-stone-gray" data-icon="star">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-grow">
+                        과거로 돌아가 앗조아틀 사원을 입맛대로 개조합니다. 방을 연결하고 업그레이드하는 설계 지식이 필수적입니다.
+                    </p>
+<div class="bg-void-black p-3 rounded-sm border border-stone-gray">
+<ul class="font-body-sm text-body-sm text-parchment-white space-y-1">
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-[#AF641D] before:rotate-45">이중 타락 방 (3단계 타락의 방)</li>
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-[#AF641D] before:rotate-45">도리아니의 방 (스킬 젬 부패)</li>
+</ul>
+</div><div class="mt-4 bg-blood-crimson/10 p-3 rounded-sm border border-blood-crimson/30"><h4 class="font-label-md text-label-md text-blood-crimson mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-sm">workspace_premium</span> 가장 가치 있는 아이템</h4><p class="font-body-sm text-body-sm text-parchment-white"><span class="text-golden-currency font-bold">타락의 정점:</span> 아이템의 가치를 수백 배로 높일 수 있는 '더블 타락' 기회를 제공합니다.</p></div>
+<div class="mt-4">
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant border border-outline px-2 py-0.5 rounded-sm">사전 지식 필요</span>
+</div>
+</div>
+</div>
+<!-- 10. 성소 (Shrine) -->
+<div class="card-stone-slab rounded-sm overflow-hidden golden-glow transition-all duration-300 group hover:-translate-y-1 relative">
+<div class="p-5 flex flex-col h-full relative z-10">
+<div class="flex justify-between items-start mb-4 card-header-accent pb-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-golden-currency text-3xl" data-icon="wb_incandescent">wb_incandescent</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-parchment-white">성소</h3>
+<p class="font-label-sm text-label-sm text-outline">Shrine</p>
+</div>
+</div>
+<div class="flex gap-1 text-golden-currency">
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" data-weight="fill">star</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6 flex-grow">
+                        맵핑 속도와 안정성을 크게 끌어올려주는 버프 기둥. 초반 아틀라스 패시브 트리에 투자하기 가장 무난한 선택지입니다.
+                    </p>
+<div class="bg-void-black p-3 rounded-sm border border-stone-gray">
+<ul class="font-body-sm text-body-sm text-parchment-white space-y-1">
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-golden-currency before:rotate-45">일시적인 강력한 캐릭터 버프</li>
+<li class="flex items-center gap-2 before:content-[''] before:block before:w-1.5 before:h-1.5 before:bg-golden-currency before:rotate-45">다수의 몬스터 팩 추가</li>
+</ul>
+</div><div class="mt-4 bg-blood-crimson/10 p-3 rounded-sm border border-blood-crimson/30"><h4 class="font-label-md text-label-md text-blood-crimson mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-sm">workspace_premium</span> 가장 가치 있는 아이템</h4><p class="font-body-sm text-body-sm text-parchment-white"><span class="text-golden-currency font-bold">갈매기 &amp; 매핑 가속:</span> 성소는 클리어 속도를 극대화하여 다른 고가치 전리품 획득을 가속화합니다.</p></div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-obsidian border-t-2 border-outline-variant docked full-width bottom mt-auto">
+<div class="w-full py-12 px-margin-edge flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto gap-6 md:gap-0">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-headline-md text-headline-md text-parchment-white mb-2 tracking-tighter">WRAECLAST CHRONICLES</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Wraeclast Chronicles. Not affiliated with Grinding Gear Games.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-parchment-white transition-colors duration-200" href="#">Official PoE Site</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-parchment-white transition-colors duration-200" href="#">PoEDB</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-parchment-white transition-colors duration-200" href="#">PoE Ninja</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-parchment-white transition-colors duration-200" href="#">Filterblade</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-parchment-white transition-colors duration-200" href="#">Wiki</a>
+</div>
+</div>
+</footer>
+
+
+</body></html>
